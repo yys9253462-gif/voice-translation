@@ -54,11 +54,9 @@ graph LR
 
 | | |
 |---|---|
-| **Providers** | 9 — OpenAI, Gemini, Palabra.ai, Kizuna AI, Doubao AST 2.0, Soniox, Zoom AI, OpenAI Compatible, Local Inference |
-| **Local Models** | 44 ASR models, 75 translation models, 137 TTS models |
-| **Languages** | 99+ (speech recognition) · 55+ (translation) · 53 (text-to-speech) |
-| **Platforms** | Linux · Windows · macOS · Chrome · Edge |
-| **Privacy** | Local Inference = 100% on-device, no API key, no internet |
+| **Provider** | OpenAI Realtime (bring your own API key) |
+| **Platforms** | Windows · macOS · Linux |
+| **Privacy** | No project backend and no analytics; audio connects directly to OpenAI |
 
 ---
 
@@ -70,7 +68,7 @@ https://github.com/user-attachments/assets/1eaaa333-a7ce-4412-a295-16b7eb2310de
 
 ## Install
 
-Sokuji is available as a **Desktop App** and a **Browser Extension** — same features, different reach.
+The current MVP is distributed as a desktop application.
 
 | | Desktop App | Browser Extension |
 |---|---|---|
@@ -81,15 +79,13 @@ Sokuji is available as a **Desktop App** and a **Browser Extension** — same fe
 
 ### Desktop App
 
-Download from the [Releases page](https://github.com/kizuna-ai-lab/sokuji/releases):
+Download from the [Releases page](https://github.com/yys9253462-gif/voice-translation/releases):
 
 | Platform | Package |
 |----------|---------|
-| Windows | `Sokuji-x.y.z.Setup.exe` |
-| macOS (Apple Silicon) | `Sokuji-x.y.z-arm64.pkg` |
-| macOS (Intel) | `Sokuji-x.y.z-x64.pkg` |
-| Linux (Debian/Ubuntu x64) | `sokuji_x.y.z_amd64.deb` |
-| Linux (Debian/Ubuntu ARM64) | `sokuji_x.y.z_arm64.deb` |
+| Windows | `VoiceTranslation-x.y.z Setup.exe` |
+| macOS | `Voice Translation-x.y.z-arch.pkg` |
+| Linux | `voice-translation_x.y.z_arch.deb` |
 
 ### Browser Extension
 
@@ -115,8 +111,8 @@ Download from the [Releases page](https://github.com/kizuna-ai-lab/sokuji/releas
 ### Build from Source
 
 ```bash
-git clone https://github.com/kizuna-ai-lab/sokuji.git
-cd sokuji && npm install
+git clone https://github.com/yys9253462-gif/voice-translation.git
+cd voice-translation && npm install
 npm run electron:dev        # Development
 npm run electron:build      # Production
 ```

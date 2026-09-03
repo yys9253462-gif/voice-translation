@@ -4,28 +4,18 @@
  * This module provides hooks for authentication state management.
  */
 
-import { useSession as useBetterAuthSession } from '../../lib/auth-client';
-
 /**
  * Hook for authentication status
  * Provides API for checking authentication state
  */
 export function useAuth() {
-  const { data: session, isPending, error } = useBetterAuthSession();
-
   return {
-    isLoaded: !isPending,
-    isSignedIn: !!session,
-    userId: session?.user?.id,
-    sessionId: session?.session?.id,
-    // Better Auth session token for header-based authentication
-    // Backend validates this token via Authorization header or WebSocket subprotocol
-    getToken: async (): Promise<string | null> => {
-      if (!session?.session) return null;
-      // Return session token for use in Authorization headers or WebSocket connections
-      return session.session.token;
-    },
-    error,
+    isLoaded: true,
+    isSignedIn: false,
+    userId: undefined,
+    sessionId: undefined,
+    getToken: async (): Promise<null> => null,
+    error: null,
   };
 }
 
@@ -34,20 +24,10 @@ export function useAuth() {
  * Provides API for accessing user data
  */
 export function useUser() {
-  const { data: session, isPending, refetch } = useBetterAuthSession();
-
   return {
-    isLoaded: !isPending,
-    user: session?.user ? {
-      id: session.user.id,
-      email: session.user.email,
-      name: session.user.name,
-      image: session.user.image,
-      emailVerified: session.user.emailVerified,
-      createdAt: session.user.createdAt,
-      updatedAt: session.user.updatedAt,
-    } : null,
-    refetch, // Expose refetch method to refresh session data
+    isLoaded: true,
+    user: null,
+    refetch: async () => undefined,
   };
 }
 
@@ -55,5 +35,5 @@ export function useUser() {
  * Hook to get the full session object
  */
 export function useSession() {
-  return useBetterAuthSession();
+  return { data: null, isPending: false, error: null, refetch: async () => undefined };
 }

@@ -1,6 +1,5 @@
 const { app, BrowserWindow, ipcMain, Menu, dialog, shell, session, systemPreferences, desktopCapturer } = require('electron');
 const path = require('path');
-const { betterAuthAdapter } = require('./better-auth-adapter');
 const { setupSubtitleHandlers } = require('./subtitle-window.js');
 const { setupCaptionDoubleClick } = require('./window-caption-dblclick.js');
 const { setupCaptionContextMenu } = require('./window-caption-menu.js');
@@ -322,15 +321,15 @@ function createApplicationMenu() {
         },
         { type: 'separator' },
         {
-          label: 'Official Website',
+          label: 'Project Homepage',
           click: async () => {
-            await shell.openExternal('https://sokuji.kizuna.ai/');
+            await shell.openExternal('https://github.com/yys9253462-gif/voice-translation');
           }
         },
         {
           label: 'Source Code',
           click: async () => {
-            await shell.openExternal('https://github.com/kizuna-ai-lab/sokuji');
+            await shell.openExternal('https://github.com/yys9253462-gif/voice-translation');
           }
         },
         {
@@ -465,24 +464,6 @@ app.whenReady().then(async () => {
   // main window. May relaunch or exit; if so, do not proceed to createWindow().
   if (sandboxRecovery && !sandboxRecovery.handleRecoveryMode(app, dialog, sandboxRecoveryOptions)) {
     return;
-  }
-
-  const isDev = import.meta.env.MODE === 'development' || !app.isPackaged;
-
-  // Initialize Better Auth adapter
-  try {
-    const backendUrl = import.meta.env.VITE_BACKEND_URL || 'http://localhost:8787';
-    const origin = isDev ? 'http://localhost:5173' : `file://${__dirname}`;
-
-    console.log(`[Sokuji] [Main] Initializing Better Auth adapter with backend: ${backendUrl}, origin: ${origin}`);
-
-    betterAuthAdapter({
-      backendUrl,
-      origin
-    });
-    console.log('[Sokuji] [Main] Better Auth adapter initialized');
-  } catch (error) {
-    console.error('[Sokuji] [Main] Error initializing Better Auth adapter:', error);
   }
 
   // Initialize WebSocket header injection (must be before any WebSocket connections)

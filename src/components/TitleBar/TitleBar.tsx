@@ -4,7 +4,6 @@ import { useTranslation } from 'react-i18next';
 import { Minus, Square, X, Settings, Terminal } from 'lucide-react';
 import { isElectron, isMacOS } from '../../utils/environment';
 import SubtitleEnterButton from '../Subtitle/SubtitleEnterButton';
-import AccountButton from './AccountButton';
 import './TitleBar.scss';
 
 interface TitleBarProps {
@@ -60,7 +59,6 @@ const TitleBar: React.FC<TitleBarProps> = ({
     >
       <span className="title-bar__title">Voice Translation</span>
       <div className="title-bar__actions">
-        <AccountButton />
         <SubtitleEnterButton />
         <button
           type="button"
