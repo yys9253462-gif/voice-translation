@@ -58,7 +58,7 @@ const TitleBar: React.FC<TitleBarProps> = ({
       className={`title-bar ${platformClass}${showInAppWindowControls ? ' has-window-controls' : ''}`}
       role="banner"
     >
-      <span className="title-bar__title">Sokuji</span>
+      <span className="title-bar__title">Voice Translation</span>
       <div className="title-bar__actions">
         <AccountButton />
         <SubtitleEnterButton />

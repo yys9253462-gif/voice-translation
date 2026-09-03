@@ -3,7 +3,7 @@ const { FuseV1Options, FuseVersion } = require('@electron/fuses');
 const fs = require('fs');
 const path = require('path');
 
-// Sokuji localizes its product UI through i18next. Electron's locale packs
+// Voice Translation localizes its product UI through i18next. Electron's locale packs
 // only cover Chromium-native UI, which intentionally falls back to English.
 // Windows/Linux use en-US.pak; macOS uses en.lproj.
 const ELECTRON_LANGUAGES = new Set([
@@ -33,9 +33,9 @@ module.exports = {
     asar: true,
     extraResource: ['assets', 'resources'],
     icon: process.platform === 'win32' ? 'assets/icon.ico' : 'assets/icon',
-    appId: 'ai.kizunaai.sokuji',
-    executableName: 'sokuji',
-    name: 'Sokuji',
+    appId: 'com.teyir.appname',
+    executableName: 'voice-translation',
+    name: 'Voice Translation',
     // Whitelist-based ignore: only include package.json, dist-electron/,
     // build/ (minus wasm/), and node_modules/ (pruned by Forge).
     // Everything else (src/, public/, model-packs/, extension/, etc.) is excluded.
@@ -96,19 +96,19 @@ module.exports = {
     {
       name: '@electron-forge/maker-squirrel',
       config: {
-        name: 'Sokuji',
-        authors: 'Kizuna AI Lab',
-        exe: 'sokuji.exe',
+        name: 'VoiceTranslation',
+        authors: 'yys9253462',
+        exe: 'voice-translation.exe',
         description: 'AI-powered live speech translation application',
         setupIcon: 'assets/icon.ico',
-        iconUrl: 'https://raw.githubusercontent.com/kizuna-ai-lab/sokuji/main/assets/icon.ico',
+        iconUrl: 'https://raw.githubusercontent.com/yys9253462-gif/voice-translation/main/assets/icon.ico',
         noMsi: true
       }
     },
     {
       name: '@electron-forge/maker-dmg',
       config: {
-        name: 'Sokuji',
+        name: 'Voice Translation',
         overwrite: true
       }
     }

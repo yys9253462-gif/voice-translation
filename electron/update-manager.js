@@ -28,8 +28,8 @@ class UpdateManager {
     // Configure GitHub provider
     autoUpdater.setFeedURL({
       provider: 'github',
-      owner: 'kizuna-ai-lab',
-      repo: 'sokuji',
+      owner: 'yys9253462-gif',
+      repo: 'voice-translation',
     });
 
     this._setupAutoUpdaterEvents();

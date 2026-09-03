@@ -412,7 +412,7 @@
   },
   "simpleConfig": {
     "interfaceLanguage": "Interface Language",
-    "interfaceLanguageDesc": "This changes the language of Sokuji's menus and buttons. It does NOT affect which languages you can translate between.",
+    "interfaceLanguageDesc": "This changes the language of Voice Translation's menus and buttons. It does NOT affect which languages you can translate between.",
     "translationLanguages": "Translation Languages",
     "translationLanguagesDesc": "Choose which language you speak (My language) and which language you want to hear the translation in (Other's language). Select \"Auto Detect\" if you're unsure which language you'll be speaking.",
     "yourLanguage": "My Language",
@@ -583,7 +583,7 @@
       "speakerYou": "Me",
       "speakerOther": "Other",
       "translationSuffix": "(trans)",
-      "headerTitle": "Sokuji conversation export",
+      "headerTitle": "Voice Translation conversation export",
       "headerGenerated": "Generated",
       "headerProvider": "Provider",
       "headerModels": "Models",
@@ -665,7 +665,7 @@
     "reconnecting": "Reconnecting..."
   },
   "setup": {
-    "title": "Set up Sokuji",
+    "title": "Set up Voice Translation",
     "stepOf": "Step {{current}} of {{total}}",
     "back": "Back",
     "next": "Next",
@@ -675,7 +675,7 @@
     "rerun": "Run setup again",
     "steps": {
       "language": {
-        "title": "Which language should Sokuji speak to you in?",
+        "title": "Which language should Voice Translation speak to you in?",
         "desc": "This is the language of menus and buttons. You choose the languages to translate between later.",
         "label": "Interface language"
       },

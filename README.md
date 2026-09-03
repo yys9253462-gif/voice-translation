@@ -1,6 +1,6 @@
-<p align="center">
-  <img width="200" src="https://github.com/kizuna-ai-lab/sokuji/raw/main/src/assets/logo.png" alt="Sokuji Logo">
-</p>
+<h1 align="center">Voice Translation</h1>
+
+<p align="center">AI实时语音翻译</p>
 
 <h3 align="center">Real-time two-way speech translation for bilingual meetings — cloud or fully offline on your device</h3>
 
@@ -8,16 +8,13 @@
   <a href="LICENSE" target="_blank">
     <img alt="AGPL-3.0 License" src="https://img.shields.io/badge/license-AGPL--3.0-blue.svg?style=flat-square" />
   </a>
-  <a href="https://github.com/kizuna-ai-lab/sokuji/actions/workflows/build.yml" target="_blank">
-    <img alt="Build and Release" src="https://github.com/kizuna-ai-lab/sokuji/actions/workflows/build.yml/badge.svg" />
+  <a href="https://github.com/yys9253462-gif/voice-translation/actions/workflows/build.yml" target="_blank">
+    <img alt="Build and Release" src="https://github.com/yys9253462-gif/voice-translation/actions/workflows/build.yml/badge.svg" />
   </a>
-  <a href="https://github.com/kizuna-ai-lab/sokuji/releases" target="_blank">
-    <img alt="Latest Release" src="https://img.shields.io/github/v/release/kizuna-ai-lab/sokuji?color=green&label=release&style=flat-square" />
+  <a href="https://github.com/yys9253462-gif/voice-translation/releases" target="_blank">
+    <img alt="Latest Release" src="https://img.shields.io/github/v/release/yys9253462-gif/voice-translation?color=green&label=release&style=flat-square" />
   </a>
   <img alt="Platforms" src="https://img.shields.io/badge/Windows%20%7C%20macOS%20%7C%20Linux%20%7C%20Chrome%20%7C%20Edge-grey?style=flat-square" />
-  <a href="https://deepwiki.com/kizuna-ai-lab/sokuji" target="_blank">
-    <img alt="Ask DeepWiki" src="https://deepwiki.com/badge.svg" />
-  </a>
 </p>
 
 <p align="center">
@@ -26,11 +23,11 @@
 
 ---
 
-## Why Sokuji?
+## About Voice Translation
 
-Built by [Kizuna AI Lab](https://github.com/kizuna-ai-lab) — we use AI to break language and accessibility barriers, creating genuine human connections. "Kizuna" (絆) means "bond" in Japanese, and Sokuji (即時) is our flagship tool to make real-time communication possible across any language.
+Voice Translation（AI实时语音翻译）是一款桌面实时语音翻译应用。
 
-Sokuji is a cross-platform live speech translation app for desktop and browser. It supports **Local Inference** — on-device ASR, translation, and TTS powered by WASM and WebGPU, with no API key required, no expensive GPU needed, fully offline, and completely private. It also integrates with cloud providers including OpenAI, Google Gemini, Palabra.ai, Kizuna AI, Doubao AST 2.0, Soniox, Zoom AI, and OpenAI-compatible APIs.
+This project is a modified fork of [Sokuji](https://github.com/kizuna-ai-lab/sokuji), originally developed by [Kizuna AI Lab](https://github.com/kizuna-ai-lab). It is distributed under the GNU Affero General Public License v3.0. Source code for this modified version is available at [yys9253462-gif/voice-translation](https://github.com/yys9253462-gif/voice-translation).
 
 ---
 
@@ -228,8 +225,8 @@ We welcome contributions! Please read our [Contributing Guidelines](.github/CONT
 
 ## Support
 
-- [Issues](https://github.com/kizuna-ai-lab/sokuji/issues) — Bug reports
-- [Discussions](https://github.com/kizuna-ai-lab/sokuji/discussions) — Questions & ideas
+- [Issues](https://github.com/yys9253462-gif/voice-translation/issues) — Bug reports
+- [Source code](https://github.com/yys9253462-gif/voice-translation) — Complete corresponding source
 
 ## Acknowledgments
 

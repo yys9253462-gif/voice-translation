@@ -1,6 +1,6 @@
 {
-  "name": "sokuji",
-  "productName": "Sokuji",
+  "name": "voice-translation",
+  "productName": "Voice Translation",
   "version": "0.39.3",
   "sidecarVersion": "0.2.0",
   "private": true,
@@ -8,12 +8,12 @@
   "homepage": "./",
   "description": "AI-powered live speech translation application",
   "author": {
-    "name": "Kizuna AI Lab",
-    "email": "contact@kizuna.ai"
+    "name": "yys9253462",
+    "email": "yys9253462@gmail.com"
   },
   "build": {
-    "appId": "ai.kizunaai.sokuji",
-    "productName": "Sokuji",
+    "appId": "com.teyir.appname",
+    "productName": "Voice Translation",
     "asar": true,
     "electronLanguages": [
       "en",
@@ -62,7 +62,7 @@
       ],
       "category": "AudioVideo",
       "icon": "assets/icon.png",
-      "executableName": "sokuji"
+      "executableName": "voice-translation"
     },
     "mac": {
       "target": [
@@ -83,7 +83,6 @@
       ],
       "category": "public.app-category.utilities",
       "icon": "assets/icon.icns",
-      "identity": "Sokuji Code Signing",
       "hardenedRuntime": true,
       "entitlements": "electron/entitlements.mac.plist",
       "entitlementsInherit": "electron/entitlements.mac.plist",
@@ -111,8 +110,8 @@
     },
     "publish": {
       "provider": "github",
-      "owner": "kizuna-ai-lab",
-      "repo": "sokuji"
+      "owner": "yys9253462-gif",
+      "repo": "voice-translation"
     },
     "afterPack": "./scripts/electron-builder-fuses.js"
   },

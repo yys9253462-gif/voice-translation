@@ -568,7 +568,7 @@ jobs:
 
   sign-windows:
     name: Sign Windows artifacts
-    if: startsWith(github.ref, 'refs/tags/v') && github.repository == 'kizuna-ai-lab/sokuji'
+    if: startsWith(github.ref, 'refs/tags/v') && github.repository == 'yys9253462-gif/voice-translation'
     needs: build
     runs-on: ubuntu-latest
     permissions:

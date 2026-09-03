@@ -69,9 +69,9 @@ const {
 }
 
 // Set application name for PulseAudio
-app.setName('sokuji');
-app.commandLine.appendSwitch('application-name', 'sokuji');
-app.commandLine.appendSwitch('jack-name', 'sokuji');
+app.setName('voice-translation');
+app.commandLine.appendSwitch('application-name', 'voice-translation');
+app.commandLine.appendSwitch('jack-name', 'voice-translation');
 
 // Single instance. Sokuji was only ever single-instance on macOS, and that was
 // Launch Services refusing to start a second copy of the .app bundle rather
@@ -197,15 +197,18 @@ function createApplicationMenu() {
       submenu: [
         {
           label: `About ${app.getName()}`,
-          click: () => {
-            dialog.showMessageBox({
+          click: async () => {
+            const { response } = await dialog.showMessageBox({
               type: 'info',
               title: `About ${app.getName()}`,
-              message: 'Sokuji - Real-time AI Translation',
-              detail: `Version: ${app.getVersion()}\n\nAI-powered real-time translation application\n\n© 2026 Kizuna AI Lab`,
-              buttons: ['OK'],
+              message: 'Voice Translation - AI实时语音翻译',
+              detail: `Version: ${app.getVersion()}\n\nCopyright © 2026 yys9253462\nBased on Sokuji by Kizuna AI Lab\nLicensed under AGPL-3.0`,
+              buttons: ['Source Code', 'OK'],
+              defaultId: 1,
+              cancelId: 1,
               icon: path.join(__dirname, '../assets/icon.png')
             });
+            if (response === 0) await shell.openExternal('https://github.com/yys9253462-gif/voice-translation');
           }
         },
         { type: 'separator' },
@@ -294,15 +297,18 @@ function createApplicationMenu() {
       submenu: [
         ...(isMac ? [] : [{
           label: `About ${app.getName()}`,
-          click: () => {
-            dialog.showMessageBox({
+          click: async () => {
+            const { response } = await dialog.showMessageBox({
               type: 'info',
               title: `About ${app.getName()}`,
-              message: 'Sokuji - Real-time AI Translation',
-              detail: `Version: ${app.getVersion()}\n\nAI-powered real-time translation application\n\n© 2026 Kizuna AI Lab`,
-              buttons: ['OK'],
+              message: 'Voice Translation - AI实时语音翻译',
+              detail: `Version: ${app.getVersion()}\n\nCopyright © 2026 yys9253462\nBased on Sokuji by Kizuna AI Lab\nLicensed under AGPL-3.0`,
+              buttons: ['Source Code', 'OK'],
+              defaultId: 1,
+              cancelId: 1,
               icon: path.join(__dirname, '../assets/icon.png')
             });
+            if (response === 0) await shell.openExternal('https://github.com/yys9253462-gif/voice-translation');
           }
         },
         { type: 'separator' }]),
@@ -355,12 +361,12 @@ function createWindow() {
   const electronVersion = process.versions.electron;
   const appVersion = app.getVersion();
   const osName = { darwin: 'macOS', win32: 'Windows', linux: 'Linux' }[process.platform] || process.platform;
-  const customUserAgent = `Sokuji/${appVersion} Electron/${electronVersion} (${osName})`;
+  const customUserAgent = `VoiceTranslation/${appVersion} Electron/${electronVersion} (${osName})`;
 
   mainWindow = new BrowserWindow({
     width: 1200,
     height: 800,
-    title: 'Sokuji',
+    title: 'Voice Translation',
     icon: iconPath,
     frame: false,
     transparent: true,
@@ -549,7 +555,7 @@ app.whenReady().then(async () => {
 
   // Initialize auto-update manager
   global.updateManager = new UpdateManager(mainWindow);
-  global.updateManager.checkAfterDelay(5000);
+  // Automatic checks stay disabled until this fork publishes its first signed release.
 
   // electron-audio-loopback handles setDisplayMediaRequestHandler automatically via initMain()
 });
@@ -1204,4 +1210,3 @@ ipcMain.handle('check-screen-recording-permission', async () => {
     return { status: 'unknown', platform: 'darwin', error: error.message };
   }
 });
-

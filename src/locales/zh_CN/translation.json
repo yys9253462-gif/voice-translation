@@ -412,7 +412,7 @@
   },
   "simpleConfig": {
     "interfaceLanguage": "界面语言",
-    "interfaceLanguageDesc": "这会更改Sokuji菜单和按钮的语言。它不会影响您可以在哪些语言之间翻译。",
+    "interfaceLanguageDesc": "这会更改 AI实时语音翻译 的菜单和按钮语言，不会影响可翻译的语言。",
     "translationLanguages": "翻译语言",
     "translationLanguagesDesc": "选择您说的语言（我的语言）和您想要听到翻译的语言（对方语言）。如果您不确定自己会说哪种语言，请选择“自动检测”。",
     "yourLanguage": "我的语言",
@@ -583,7 +583,7 @@
       "speakerYou": "我",
       "speakerOther": "对方",
       "translationSuffix": "(译)",
-      "headerTitle": "Sokuji 对话导出",
+      "headerTitle": "AI实时语音翻译 对话导出",
       "headerGenerated": "生成时间",
       "headerProvider": "服务商",
       "headerModels": "模型",
@@ -970,7 +970,7 @@
     "importChooseModel": "选择要导入的模型"
   },
   "setup": {
-    "title": "设置 Sokuji",
+    "title": "设置 AI实时语音翻译",
     "stepOf": "第 {{current}} 步，共 {{total}} 步",
     "back": "上一步",
     "next": "下一步",
@@ -980,7 +980,7 @@
     "rerun": "重新运行设置向导",
     "steps": {
       "language": {
-        "title": "Sokuji 用什么语言和你交流？",
+        "title": "AI实时语音翻译 用什么语言和你交流？",
         "desc": "这是菜单和按钮的语言。翻译用的语言稍后再选。",
         "label": "界面语言"
       },
